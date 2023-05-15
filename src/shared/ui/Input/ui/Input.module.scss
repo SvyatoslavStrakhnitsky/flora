@@ -1,0 +1,37 @@
+.wrapper {
+    max-width: min(680px, var(--screen));
+}
+
+.input {
+    color: var(--primary-color);
+    background: transparent;
+    border: 1px solid var(--bg-card-color);
+    outline: none;
+    caret-color: var(--primary-color);
+    flex-grow: 1;
+    padding: .9rem 1rem;
+    border-radius: 10px;
+
+    &:focus {
+        box-shadow: 0 0 5px var(--bg-card-color);
+    }
+}
+
+.label {
+    display: flex;
+    flex-direction: column;
+
+    & > span {
+        text-overflow: ellipsis;
+        overflow: hidden; 
+        white-space: nowrap;
+    }
+}
+
+.isLabel {
+    margin-top: .3rem;
+}
+
+.readonly {
+    opacity: 0.7;
+}

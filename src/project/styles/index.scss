@@ -1,0 +1,14 @@
+@import "reset";
+@import "variables";
+
+body {
+    font-size: var(--font-size);
+    line-height: var(--font-line);
+    min-height: 100vh;
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+}
+
+button {
+    font: inherit;
+}

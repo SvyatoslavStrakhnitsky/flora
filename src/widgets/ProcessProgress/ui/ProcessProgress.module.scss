@@ -1,0 +1,133 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    gap: .25rem
+}
+
+.blob {
+    display: none;
+}
+
+.block {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.label {
+    display: none;
+    color: var(--bg-card-color);
+}
+
+.dot {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    opacity: .3;
+    border: none;
+    outline: none;
+    position: relative;
+    overflow: hidden;
+
+    &.active {
+        opacity: 1;
+    }
+
+    &.active::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0.5rem;
+        height: 0.5rem;
+        background-color: var(--accent-color);
+    }
+
+    &.current {
+        opacity: 1;
+    }
+
+    &.current::after {
+        content: '';
+        position: absolute;
+        width: 0.5rem;
+        height: 0.5rem;
+        background-color: var(--primary-color);
+    }
+}
+
+.bar {
+    height: 1px;
+    width: 40px;
+    background-color: var(--primary-color);
+    opacity: .3;
+    position: relative;
+    overflow: hidden;
+
+    &.active {
+        opacity: 1;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        height: 1px;
+        width: 40px;
+        transform: translateX(-40px);
+        background-color: var(--accent-color);
+        transition: transform .5s linear;
+    }
+
+    &.active::after {
+        transform: translateX(0);
+    }
+}
+
+@media(min-width: 680px) {
+    .wrapper {
+        flex-direction: column;
+        align-items: center;
+    }   
+
+    .bar {
+        width: 1px;
+        height: 40px;
+
+        &::after {
+            height: 40px;
+            width: 1px;
+            transform: translateY(-40px);
+        }
+    
+        &.active::after {
+            transform: translateX(0);
+        }
+    }
+
+    .blob {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        opacity: 0.7;
+    }
+
+    .block {
+        .label {
+            position: absolute;
+            display: block;
+            white-space: nowrap;
+            left: 1rem;
+            transition: color .5s linear;
+
+            &.active {
+                color:  var(--accent-color)
+            }
+
+            &.current {
+                color: var(--primary-color)
+            }
+        }
+    }
+}

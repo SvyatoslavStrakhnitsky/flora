@@ -1,0 +1,49 @@
+.primary {
+    color: var(--primary-color);
+}
+
+.accent {
+    color: var(--accent-color);
+}
+
+.w300 {
+    font-weight: 300;
+}
+
+.w400 {
+    font-weight: 400;
+}
+
+.w500 {
+    font-weight: 500;
+}
+
+.w600 {
+    font-weight: 600;
+}
+
+.w700 {
+    font-weight: 700;
+}
+
+.small {
+    font-size: 0.875rem;
+    line-height: 1.4rem;
+}
+
+.normal {
+    font-size: 1rem;
+    line-height: 1.4rem;
+}
+
+.large {
+    font-size: 1.7rem;
+    line-height: 2.4rem;
+}
+
+@media (min-width: 60em) {
+    .small {
+        font-size: 1.25rem;
+        line-height: 1.5rem;
+    }
+}

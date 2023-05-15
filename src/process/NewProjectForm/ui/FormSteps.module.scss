@@ -1,0 +1,65 @@
+.screen {
+    display: flex;
+    transition: transform .5s linear;
+    max-width: 680px;
+}
+
+.step {
+    flex-shrink: 0;
+    flex-basis: 100vw;
+    padding-inline: 1rem;
+}
+
+.text {
+    margin-bottom: .5rem;
+}
+
+.title {
+    margin-bottom: 1.5rem;
+}
+
+.input {
+    margin-bottom: 1.5rem;
+}
+
+.chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+    margin-top: .75rem;
+}
+
+.radioBtn {
+    margin-bottom: 1rem;
+}
+
+.numberField {
+    margin-bottom: 1.5rem;
+}
+
+.legend {
+    margin-bottom: 1rem;
+}
+
+.btnWrapper {
+    display: flex;
+    gap: 1rem;
+}
+
+@media(min-width: 680px) {
+    .screen {
+        flex-direction: column;
+        padding: 6.25rem 3.75rem;
+    }   
+    
+    .step {
+        position: relative;
+        flex-shrink: 0;
+        flex-basis: 100vh;
+    }
+
+    .btnWrapper {
+        gap: 2rem;
+    }
+}

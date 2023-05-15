@@ -1,0 +1,25 @@
+.chip {
+    border: none;
+    outline: none;
+    color: var(--primary-color);
+    max-width: 150px;
+    background-color: var(--bg-card-color);
+    border-radius: 16px;
+    padding: .375rem .75rem;
+    text-overflow: ellipsis;
+    overflow: hidden; 
+    white-space: nowrap;
+    cursor: pointer;
+
+    &:is(:hover, :focus) {
+        transform: scale(1.05);
+        transition: transform .2s linear;
+        box-shadow: 0 0 8px var(--bg-card-active-color);
+    }
+}
+
+.selected {
+    background-color: var(--bg-card-active-color);
+    color: var(--accent-color);
+    transition: background-color .2s linear, color .2s linear;
+}

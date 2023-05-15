@@ -1,0 +1,10 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+
+    & input {
+        max-width: 200px;
+        text-align: center;
+    }
+}
